@@ -7,7 +7,7 @@ function formatTime(time) {
 
   let minutes = time.getMinutes();
   if (minutes < 10) {
-    hours = `0${minutes}`;
+    minutes = `0${minutes}`;
   }
 
   let days = [
@@ -94,7 +94,20 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+function searchLocation(position) {
+  let apiKey = "498800558a7c5bd6e9bc3ec1ccb9adfe";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
+}
+
+function retreiveCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
 let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", handleSubmit);
+
+let currentLocationButton = document.querySelector("#btnCurrentLocation");
+currentLocationButton.addEventListener("click", retreiveCurrentLocation);
 
 searchCity("Berlin");
