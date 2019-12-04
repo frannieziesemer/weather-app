@@ -1,0 +1,97 @@
+.font,
+button {
+  font-family: "Roboto Condensed", sans-serif;
+  color: hsl(206, 100%, 93%);
+}
+
+.weather {
+  margin: 20px 50px 20px 50px;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  border-radius: 20px;
+}
+
+.city-search {
+  margin: 0 auto;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+}
+
+.degrees-selection {
+  text-align: left;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 38px;
+  padding: 20px 0px 0px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 250;
+  padding: 0px 0px 20px;
+  font-weight: 250;
+}
+
+.degrees-selection {
+  font-size: 28px;
+}
+
+.temperature {
+  font-size: 100px;
+  font-weight: 100;
+  text-align: right;
+}
+
+.btn-primary {
+  border-radius: 25px;
+  border-style: none;
+  color: #09203f;
+  padding: 5px 10px;
+  background: #45efd3;
+}
+#btnCurrentLocation {
+  background: #45efd3;
+  border-style: none;
+  border-radius: 25px;
+  margin: 20px auto;
+  padding: 5px 10px;
+  color: #09203f;
+  font-size: 18px;
+}
+.current-status-icon {
+  font-size: 98px;
+  text-align: right;
+  color: #dbd56e;
+}
+
+.current-status-col {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.forecast {
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+#farenheitLink:hover,
+#celciusLink:hover {
+  cursor: pointer;
+  color: #de8ffd;
+  text-decoration-line: underline;
+}
+
+#weatherDescription {
+  text-transform: capitalize;
+}
