@@ -49,8 +49,8 @@ function convertTempFarenheit(event) {
   farenheitTemp.innerHTML = "54";
 }
 
-let farenheit = document.querySelector("#farenheitLink");
-farenheit.addEventListener("click", convertTempFarenheit);
+// let farenheit = document.querySelector("#farenheitLink");
+// farenheit.addEventListener("click", convertTempFarenheit);
 
 function convertTempCelcius() {
   let celciusTemp = document.querySelector("#currentTemp");
@@ -82,13 +82,19 @@ function displayWeather(response) {
   );
 }
 
-function searchCity(event) {
-  event.preventDefault();
+function searchCity(city) {
   let apiKey = "498800558a7c5bd6e9bc3ec1ccb9adfe";
-  let city = document.querySelector("#inputCity").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#inputCity").value;
+  searchCity(city);
+}
+
 let searchForm = document.querySelector("#searchForm");
-searchForm.addEventListener("submit", searchCity);
+searchForm.addEventListener("submit", handleSubmit);
+
+searchCity("Berlin");
