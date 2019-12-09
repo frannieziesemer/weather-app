@@ -5,9 +5,10 @@ button {
 }
 
 .weather {
-  margin: 20px 50px 20px 50px;
+  max-width: 600px;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   border-radius: 20px;
+  margin: 30px auto;
 }
 
 .city-search {
@@ -22,18 +23,18 @@ button {
 
 h1,
 h2 {
-  text-align: center;
+  text-align: left;
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 48px;
   padding: 20px 0px 0px;
   font-weight: 400;
   text-transform: capitalize;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 250;
   padding: 0px 0px 20px;
   font-weight: 250;
@@ -46,7 +47,7 @@ h2 {
 .temperature {
   font-size: 100px;
   font-weight: 100;
-  text-align: right;
+  text-align: center;
 }
 
 .btn-primary {
@@ -67,8 +68,14 @@ h2 {
 }
 .current-status-icon {
   font-size: 98px;
-  text-align: right;
+  text-align: left;
   color: #dbd56e;
+  padding: 40px;
+}
+
+.currentColumn {
+  margin: auto;
+  text-align: left;
 }
 
 .current-status-col {
