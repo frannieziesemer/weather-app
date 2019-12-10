@@ -1,4 +1,4 @@
-.font,
+.weather,
 button {
   font-family: "Roboto Condensed", sans-serif;
   color: hsl(206, 100%, 93%);
@@ -9,44 +9,12 @@ button {
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   border-radius: 20px;
   margin: 30px auto;
+  display: block;
 }
 
-.city-search {
+.citySearch {
   margin: 0 auto;
   padding: 20px 0px 20px 0px;
-  text-align: center;
-}
-
-.degrees-selection {
-  text-align: left;
-}
-
-h1,
-h2 {
-  text-align: left;
-}
-
-h1 {
-  font-size: 48px;
-  padding: 20px 0px 0px;
-  font-weight: 400;
-  text-transform: capitalize;
-}
-
-h2 {
-  font-size: 14px;
-  font-weight: 250;
-  padding: 0px 0px 20px;
-  font-weight: 250;
-}
-
-.degrees-selection {
-  font-size: 28px;
-}
-
-.temperature {
-  font-size: 100px;
-  font-weight: 100;
   text-align: center;
 }
 
@@ -57,39 +25,56 @@ h2 {
   padding: 5px 10px;
   background: #45efd3;
 }
+
 #btnCurrentLocation {
   background: #45efd3;
   border-style: none;
   border-radius: 25px;
-  margin: 20px auto;
-  padding: 5px 10px;
+  box-shadow: 3px 3px 3px;
   color: #09203f;
+  display: block;
   font-size: 18px;
+  margin: 0px auto;
+  padding: 5px 10px;
 }
-.current-status-icon {
+
+h1 {
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin: 0px 0px 0px 30px;
+  padding: 50px 0px 0px 0px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 250;
+  padding: 0px 0px 20px 2px;
+  font-weight: 250;
+}
+
+.degreesSelection {
+  font-size: 28px;
+}
+
+.btn-primary {
+  border-radius: 25px;
+  border-style: none;
+  color: #09203f;
+  padding: 5px 10px;
+  background: #45efd3;
+}
+
+.currentStatusIcon {
   font-size: 98px;
   text-align: left;
   color: #dbd56e;
-  padding: 40px;
+  margin: 10px auto;
 }
 
-.currentColumn {
-  margin: auto;
-  text-align: left;
-}
-
-.current-status-col {
-  text-align: left;
-  font-size: 18px;
-  font-weight: 200;
-}
-
-.forecast {
-  font-weight: 300;
-}
-
-ul {
-  list-style: none;
+.temperature {
+  font-size: 100px;
+  font-weight: 100px;
 }
 
 #farenheitLink:hover,
@@ -99,10 +84,23 @@ ul {
   text-decoration-line: underline;
 }
 
+.currentDataColumn {
+  padding: 20px, 0px, 0px;
+}
+.forecast {
+  font-weight: 300;
+  margin: 0px auto;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
 #weatherDescription {
   text-transform: capitalize;
 }
 
 .gitLink {
-  font-size: 14px;
+  margin: 7px;
 }
