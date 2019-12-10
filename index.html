@@ -1,129 +1,130 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Frannies Weather</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Condensed&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/8e394f445c.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  </head>
 
-  <body>
-    <section class="weather">
-      <div class="container">
-        <form id="searchForm">
-          <div class="citySearch">
-            <input
-              type="text"
-              class="form-search"
-              id="inputCity"
-              aria-describedby="formSearch"
-              placeholder="Search city..."
-            />
-            <button type="submit" class="btn btn-primary">
-              <i class="fas fa-search"></i>
+<head>
+  <title>Frannies Weather</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Condensed&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8e394f445c.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body class="font">
+  <section class="weather">
+    <div class="container">
+      <form id="searchForm">
+        <div class="citySearch">
+          <input type="text" class="form-search" id="inputCity" aria-describedby="formSearch"
+            placeholder="Search city...">
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+          </button>
+          <div>
+            <button type="submit" id="btnCurrentLocation">
+              Search Current Location
             </button>
           </div>
-          <button type="submit" id="btnCurrentLocation">
-            Search Current Location
-          </button>
-        </form>
-        <h1 id="displayCity"></h1>
-        <p class="currentTime">
-          Last updated: <span id="time">Sunday, 3rd Nov 20:30</span>
-        </p>
-        <div class="row">
-          <div class="col-4">
-            <i class="fas fa-sun currentStatusIcon"></i>
-          </div>
-          <div class="col-4 ">
-            <h3 class="temperature" id="currentTemp">
-              <span class="degreesSelection" id="celciusLink"> °C </span>
-            </h3>
-          </div>
-          <div class="col-4 currentDataColumn ">
-            <ul>
-              <li id="weatherDescription"></li>
-              <li>
-                <i class="fas fa-thermometer-three-quarters"></i>
-                High <span id="currentHighTemp"> </span>
-              </li>
-              <li>
-                <i class="fas fa-thermometer-quarter"></i>
-                Low <span id="currentLowTemp"> </span>
-              </li>
-              <li>
-                <i class="fas fa-wind"></i>
-                <span id="currentWind"> </span> km/h
-              </li>
-              <li>
-                <i class="fas fa-umbrella"></i>
-                <span id="currentHumidity"> </span> %
-              </li>
-            </ul>
-          </div>
+      </form>
+        <div id="overview">
+          <ul>
+            <li>
+              <h1 id="displayCity"></h1>
+            </li>
+            <li>
+              <p>
+                Last Updated:
+                <span class="currentTime " id="time">
+                Sunday, 3rd Nov 20:30 </span>
+              </p>
+            </li>
+          </ul>
         </div>
-        <hr />
-        <div class="forecast row">
-          <div class="col">
-            Mon
-          </div>
-          <div class="col">
-            Tue
-          </div>
-          <div class="col">
-            Wed
-          </div>
-          <div class="col">
-            Thu
-          </div>
-          <div class="col">
-            Fri
-          </div>
-          <div class="w-100"></div>
-          <div class="col">
-            <i class="fas fa-cloud-sun"></i>
-          </div>
-          <div class="col">
-            <i class="fas fa-cloud-sun-rain"></i>
-          </div>
-          <div class="col">
-            <i class="fas fa-cloud-showers-heavy"></i>
-          </div>
-          <div class="col">
-            <i class="fas fa-cloud"></i>
-          </div>
-          <div class="col">
-            <i class="fas fa-sun"></i>
-          </div>
-          <div class="w-100"></div>
-          <div class="col">11°</div>
-          <div class="col">7°</div>
-          <div class="col">6°</div>
-          <div class="col">10°</div>
-          <div class="col">13°</div>
+      <div class="row">
+        <div class="col-5">
+          <ul>
+            <li>
+              <h3 class="temperature float-left" id="currentTemp"></h3>
+              <span class="degreesSelection float-left" id="celciusLink"> °C </a></span>
+              <!-- | <span id="farenheitLink"> °F </a></span> -->
+            </li>
+          </ul>
+        </div>
+        <div class="col-3">  
+          <i class="fas fa-sun currentStatusIcon float-left"></i>
+        </div>
+        <div class="col-4 currentColumn float-left">
+          <ul class="currentColumn ">
+            <li id="weatherDescription"></li>
+            <li>
+              <i class="fas fa-thermometer-three-quarters"></i>
+              High <span id="currentHighTemp"> </span>
+            </li>
+            <li>
+              <i class="fas fa-thermometer-quarter"></i>
+              Low <span id="currentLowTemp"> </span>
+            </li>
+            <li>
+              <i class="fas fa-wind"></i>
+              <span id="currentWind"> </span> km/h
+            </li>
+            <li>
+              <i class="fas fa-umbrella"></i>
+              <span id="currentHumidity"> </span> %
+            </li>
+          </ul>
         </div>
       </div>
-      <small class="gitLink">
-        <a href="https://github.com/frannieziesemer/weather-app"
-          >Open-source code</a
-        >
-        by Frannie Ziesemer
-      </small>
-    </section>
-    <script src="script.js"></script>
-  </body>
+      <hr />
+      <div class="forecast row">
+        <div class="col">
+          Mon
+        </div>
+        <div class="col">
+          Tue
+        </div>
+        <div class="col">
+          Wed
+        </div>
+        <div class="col">
+          Thu
+        </div>
+        <div class="col">
+          Fri
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="col">
+          <i class="fas fa-cloud-sun-rain"></i>
+        </div>
+        <div class="col">
+          <i class="fas fa-cloud-showers-heavy"></i>
+        </div>
+        <div class="col">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <div class="col">
+          <i class="fas fa-sun"></i>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">11°</div>
+        <div class="col">7°</div>
+        <div class="col">6°</div>
+        <div class="col">10°</div>
+        <div class="col">13°</div>
+      </div>
+    </div>
+    <small class="gitLink">
+      <a href="https://github.com/frannieziesemer/weather-app">Open-source code</a>
+      by Frannie Ziesemer
+    </small>
+  </section>
+  <script src="script.js"></script>
+
+</body>
+
 </html>
