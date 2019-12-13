@@ -80,6 +80,15 @@ function displayWeather(response) {
   document.querySelector("#currentHumidity").innerHTML = Math.round(
     response.data.main.humidity
   );
+  document
+    .querySelector("#currentIcon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("currentIcon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
