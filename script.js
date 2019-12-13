@@ -36,7 +36,7 @@ function formatTime(time) {
     "Dec"
   ];
   let month = months[time.getMonth()];
-  return `${day}, ${date} ${month}, ${hours}:${minutes}`;
+  return `${hours}:${minutes}, ${day} ${date} ${month} `;
 }
 
 let dateElement = document.querySelector("#time");

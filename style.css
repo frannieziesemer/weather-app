@@ -1,12 +1,12 @@
 .weather,
 button {
   font-family: "Roboto Condensed", sans-serif;
-  color: hsl(206, 100%, 93%);
+  color: #09203f;
 }
 
 .weather {
   max-width: 600px;
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   border-radius: 20px;
   margin: 30px auto;
   display: block;
@@ -36,7 +36,7 @@ button {
   background: #45efd3;
   border-style: none;
   border-radius: 25px;
-  box-shadow: 3px 3px 3px;
+  box-shadow: 3px 3px 3px #19457e;
   color: #09203f;
   display: block;
   font-size: 18px;
@@ -59,20 +59,13 @@ p {
 
 .degreesSelection {
   font-size: 28px;
-  margin: 20px 0px 0px 0px;
+  margin: 12px 0px 0px 0px;
 }
 
 .temperature {
-  font-size: 130px;
+  font-size: 100px;
   font-weight: 100px;
   margin: 0px 0px 10px 25px;
-}
-
-.currentStatusIcon {
-  font-size: 100px;
-  text-align: center;
-  color: #dbd56e;
-  margin: 0px 0px 0px 30px;
 }
 
 #farenheitLink:hover,
@@ -80,6 +73,11 @@ p {
   cursor: pointer;
   color: #de8ffd;
   text-decoration-line: underline;
+}
+
+.forecast,
+.gitLink {
+  color: #076585;
 }
 
 .forecast {
@@ -97,5 +95,5 @@ ul {
 }
 
 .gitLink {
-  margin: 7px;
+  colormargin: 7px;
 }
