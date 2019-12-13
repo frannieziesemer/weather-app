@@ -24,8 +24,15 @@ button {
   text-align: center;
 }
 
+input {
+  border: none;
+  border-radius: 15px 5px 5px 15px;
+  background: #aeccef;
+  padding: 5px;
+}
+
 .btn-primary {
-  border-radius: 25px;
+  border-radius: 5px 15px 15px 5px;
   border-style: none;
   color: #09203f;
   padding: 5px 10px;
@@ -35,9 +42,9 @@ button {
 #btnCurrentLocation {
   background: #45efd3;
   border-style: none;
-  border-radius: 25px;
-  box-shadow: 3px 3px 3px #19457e;
-  color: #09203f;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px #19457e;
+  color: #19457e;
   display: block;
   font-size: 18px;
   margin: 30px auto;
@@ -95,5 +102,5 @@ ul {
 }
 
 .gitLink {
-  colormargin: 7px;
+  padding: 7px;
 }
