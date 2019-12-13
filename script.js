@@ -43,28 +43,14 @@ let dateElement = document.querySelector("#time");
 let currentTime = new Date();
 dateElement.innerHTML = formatTime(currentTime);
 
-function convertTempFarenheit(event) {
-  event.preventDefault();
-  let farenheitTemp = document.querySelector("#currentTemp");
-  farenheitTemp.innerHTML = "54";
-}
-
-// let farenheit = document.querySelector("#farenheitLink");
-// farenheit.addEventListener("click", convertTempFarenheit);
-
-function convertTempCelcius() {
-  let celciusTemp = document.querySelector("#currentTemp");
-  celciusTemp.innerHTML = "12";
-}
-
-let celcius = document.querySelector("#celciusLink");
-celcius.addEventListener("click", convertTempCelcius);
-
 function displayWeather(response) {
   console.log(response.data);
   document.querySelector("#displayCity").innerHTML = response.data.name;
+
+  celciusTemperature = response.data.main.temp;
+
   document.querySelector("#currentTemp").innerHTML = Math.round(
-    response.data.main.temp
+    celciusTemperature
   );
   document.querySelector("#weatherDescription").innerHTML =
     response.data.weather[0].description;
@@ -113,6 +99,31 @@ function retreiveCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
+function convertTempFarenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#currentTemp");
+  celciusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+  let farenheitTemp = (celciusTemperature * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(farenheitTemp);
+}
+
+function convertTempCelcius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#currentTemp");
+  farenheitLink.classList.remove("active");
+  celciusLink.classList.add("active");
+  tempElement.innerHTML = Math.round(celciusTemperature);
+}
+let celciusTemperature = null;
+
+let farenheitLink = document.querySelector("#farenheitLink");
+farenheitLink.addEventListener("click", convertTempFarenheit);
+
+let celciusLink = document.querySelector("#celciusLink");
+celciusLink.addEventListener("click", convertTempCelcius);
+
 let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", handleSubmit);
 

@@ -28,7 +28,7 @@ input {
   border: none;
   border-radius: 15px 5px 5px 15px;
   background: #aeccef;
-  padding: 5px;
+  padding: 5px 5px 5px 10px;
 }
 
 .btn-primary {
@@ -40,7 +40,7 @@ input {
 }
 
 #btnCurrentLocation {
-  background: #45efd3;
+  background: #e1d7f9;
   border-style: none;
   border-radius: 15px;
   box-shadow: 1px 1px 3px #19457e;
@@ -69,17 +69,19 @@ p {
   margin: 12px 0px 0px 0px;
 }
 
+.degreesSelection .active {
+  color: #09203f;
+  cursor: default;
+}
+
+.degreesSelection .active:hover {
+  text-decoration: none;
+}
+
 .temperature {
   font-size: 100px;
   font-weight: 100px;
-  margin: 0px 0px 10px 25px;
-}
-
-#farenheitLink:hover,
-#celciusLink:hover {
-  cursor: pointer;
-  color: #de8ffd;
-  text-decoration-line: underline;
+  margin: 0px 0px 10px 0px;
 }
 
 .forecast,
