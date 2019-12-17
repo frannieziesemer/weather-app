@@ -20,7 +20,7 @@ button {
 
 .citySearch {
   margin: 0 auto;
-  padding: 20px 0px 20px 0px;
+  padding: 10px 0px 20px 0px;
   text-align: center;
 }
 
@@ -47,7 +47,7 @@ input {
   color: #19457e;
   display: block;
   font-size: 18px;
-  margin: 30px auto;
+  margin: 10px auto;
   padding: 5px 10px;
 }
 
@@ -55,6 +55,7 @@ h1 {
   font-size: 48px;
   font-weight: 400;
   text-transform: capitalize;
+  padding: 20px 0px 0px 0px;
 }
 
 p {
@@ -90,8 +91,10 @@ p {
 }
 
 .forecast {
-  font-weight: 300;
+  display: block;
   margin: 0px auto;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 ul {
@@ -104,5 +107,6 @@ ul {
 }
 
 .gitLink {
-  padding: 7px;
+  padding: 30px 0px 0px 5px;
+  margin: 30px auto;
 }
