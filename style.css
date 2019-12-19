@@ -85,16 +85,20 @@ p {
   margin: 0px 0px 10px 0px;
 }
 
-.forecast,
+#forecast,
 .gitLink {
   color: #076585;
 }
 
-.forecast {
-  display: block;
+#forecast {
   margin: 0px auto;
   text-align: center;
   padding-bottom: 20px;
+}
+
+.forecastImg {
+  display: block;
+  width: 30px;
 }
 
 ul {
