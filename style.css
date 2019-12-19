@@ -94,11 +94,12 @@ p {
   margin: 0px auto;
   text-align: center;
   padding-bottom: 20px;
+  text-size-adjust: ;
+  font-size: 24px;
 }
 
-.forecastImg {
-  display: block;
-  width: 30px;
+img.forecastImg {
+  max-width: 75%;
 }
 
 ul {
