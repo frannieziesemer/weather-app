@@ -1,6 +1,6 @@
 # weather-app
 
-Vanilla JavaScript WEather Application 
+Vanilla JavaScript Weather Application 
 
 Built for SheCodes front-end development online course 
 
